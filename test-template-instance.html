@@ -1,0 +1,21 @@
+<head>
+  <title>test-template-instance</title>
+</head>
+
+<body>
+  <h1>Welcome to Meteor!</h1>
+
+  {{> mainTemplate}}
+</body>
+
+<template name="mainTemplate">
+  {{> hello dataContext}}
+</template>
+
+<template name="hello">
+  <p>Found template instance: {{dataTemplateInstance}}.</p>
+  <p>Found template instance: {{this.dataTemplateInstance}}.</p>
+  <p>Found template instance: {{templateInstance}}.</p>
+  <p>Found template instance: {{getTemplateInstance.tmplTemplateInstance}}.</p>
+  <p>Found template instance: {{getHelperFunctions.templateInstance}}.</p>
+</template>
